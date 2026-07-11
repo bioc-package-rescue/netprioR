@@ -13,10 +13,9 @@ biocViews: ImmunoOncology, CellBasedAssays, Preprocessing, Network
 Type: Package
 Lazyload: yes
 LazyData: true
-Version: 1.39.1
+Version: 1.39.2
 Date: 2016-05-08
-Author: Fabian Schmich
-Maintainer: Fabian Schmich <fabian.schmich@bsse.ethz.ch>
+Authors@R: person("Fabian", "Schmich", email = "fabian.schmich@bsse.ethz.ch", role = c("aut", "cre"))
 License: GPL-3
 URL: http://bioconductor.org/packages/netprioR
 RoxygenNote: 5.0.1
