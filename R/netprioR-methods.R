@@ -17,7 +17,7 @@ setMethod(f = "weights",
             Network <- Weight <- NULL
             if(object@is.fitted) {
               ans <- data.frame(Network = names(object@model$W), Weight = object@model$W) %>%
-                tbl_df %>%
+                as_tibble %>%
                 arrange(desc(Weight))
               rownames(ans) <- c()
               return(ans)
@@ -56,7 +56,7 @@ setMethod(f = "ranks",
               }
               data.frame(Id = ids[unlabelled], 
                          Score = object@model$Yimp[unlabelled]) %>%
-                tbl_df %>%
+                as_tibble %>%
                 arrange(desc(Score)) %>%
                 mutate(Rank = 1:length(unlabelled)) %>%
                 select(Rank, Id, Score)

@@ -100,7 +100,7 @@ learn <- function(Yobs, X, G, l, u, a = 0.1, b = 0.1, sigma2 = 1, tau2 = 10, eps
         cat(i, "iteration: ", conv, "\n")
         #cat("W: ", W.new %>% as.numeric, "\n")
         cat("beta: ", beta.new %>% as.numeric, "\n")
-        print(data.frame(G = names(G), W = W.new) %>% tbl_df %>% arrange(desc(W)) %>% data.frame)
+        print(data.frame(G = names(G), W = W.new) %>% as_tibble %>% arrange(desc(W)) %>% data.frame)
         cat("loglik: ", loglik.new %>% as.numeric, "\n\n")
       }
       
